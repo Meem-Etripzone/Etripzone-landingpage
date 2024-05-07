@@ -37,15 +37,15 @@ const Navbar = () => {
   ];
   return (
     <nav>
-      <div 
-       sx={{
-        height:'20px'
-      }}
-      className="nav-logo-container"
+      <div
+        sx={{
+          height: '20px'
+        }}
+        className="nav-logo-container"
       >
-       
+
         <img src={Logo} alt="" />
-      
+
       </div>
       <div className="navbar-links-container">
         {/* <a href="">Home</a>
@@ -55,8 +55,8 @@ const Navbar = () => {
         <a href="">
           <BsCart2 className="navbar-cart-icon" />
         </a> */}
-       <button className="primary-button" 
-        
+        <button className="primary-button"
+
         ><HiArrowRightEndOnRectangle /> Rejister</button>
       </div>
       <div className="navbar-menu-container">
