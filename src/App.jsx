@@ -6,6 +6,8 @@ import BannerLogin from './Home/Banner/BannerLogin'
 import BannerModal from './Home/Banner/BannerModal'
 import Navbar from './Home/Shared/Navbar'
 import KeyAirlines from './Home/KeyAirlines/KeyAirlines'
+import Footer from './Home/Shared/Footer'
+import WhyUs from './Home/WhyUs/WhyUs'
 
 
 
@@ -17,6 +19,8 @@ function App() {
     <Navbar />
      <Banner />
 <KeyAirlines />
+<WhyUs />
+<Footer />
      {/* <BannerLogin /> */}
      {/* <BannerModal /> */}
     </>
