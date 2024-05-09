@@ -8,6 +8,7 @@ import Navbar from './Home/Shared/Navbar'
 import KeyAirlines from './Home/KeyAirlines/KeyAirlines'
 import Footer from './Home/Shared/Footer'
 import WhyUs from './Home/WhyUs/WhyUs'
+import ExploreWorld from './Home/ExploreWorld/ExploreWorld'
 
 
 
@@ -19,6 +20,7 @@ function App() {
     <Navbar />
      <Banner />
 <KeyAirlines />
+{/* <ExploreWorld /> */}
 <WhyUs />
 <Footer />
      {/* <BannerLogin /> */}

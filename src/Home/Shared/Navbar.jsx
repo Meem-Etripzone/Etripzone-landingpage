@@ -9,7 +9,7 @@ import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import { BsCart2 } from 'react-icons/bs';
 import { HiArrowRightEndOnRectangle, HiOutlineBars3 } from 'react-icons/hi2';
 // import { HiOutlineBars3 } from 'react-icons/hi2';
-import Logo from '../../assets/logo3.png'
+import Logo from '../../assets/logo7.png'
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
