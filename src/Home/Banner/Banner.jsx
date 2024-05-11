@@ -1,69 +1,64 @@
-import React from 'react';
+
 import banner from '../../assets/banner.jpg'
-import { Box, Button, Checkbox, TextField, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 
-
-
-
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 const Banner = () => {
   return (
-    <div>
-<div className="home-container">
-
-      <div className="home-banner-container">
-        <div className="home-bannerImage-container">
-          <img src={banner} alt="" />
-        </div>
-        <Box className="login-form"
-        sx={{
-          // height:'400px',
-          width:'350px',
-          backgroundColor:'#ffffff',
-          border:'2px solid #ffffff',
-          zIndex: 10,
-          borderRadius: 2,
-          '& > :not(style)': { m: 1, width: '25ch' },
-          paddingBottom:'40px'
-        }}
-        >
-<Typography 
-        style={{
-            fontSize:'25px',
-            textAlign:'start',
-            fontWeight:'bold',
-            // padding:'25px 15px',
-            marginLeft:'50px',
-            color:'black'
-        }}
-        >Already <br /> Using <span style={{color:'#990000'}}>Etrip</span>zone?</Typography>
-          <TextField 
- 
-          id="email" label="Email" variant="standard" />
-          <TextField id="password" label="Password" variant="standard" />
-
-     <Button sx={{
-      width:"370px",
-      backgroundColor:"#000080",
-      color:"#ffffff",
-      
-     }}
-     className="primary-button"
-     >Login</Button>
-
-     <div style={{display:'flex', marginLeft:'50px'}}>
-     <Typography
-     sx={{color:'#6a6a6a',fontSize:'12px'}}
-     >Don't have an account? </Typography>
-    <a href=""style={{color:'#990000', fontSize:"12px"}}> Register Now</a>
-     </div>
+    <Grid container spacing={2} justifyContent="center" sx={{ height: { xs: '430px', md: '430px' } }}>
+      <Grid item xs={12} >
+        <Box >
+          <img src={banner} alt="Banner" style={{ width: '100%', objectFit: 'cover' }} />
         </Box>
-      </div>
-    </div>
-    </div>
+      </Grid>
+      <Grid item xs={12}>
+        <Box
+          sx={{
+            width: { xs: '350px', md: '350px' },
+            backgroundColor: '#ffffff',
+            border: '2px solid #ffffff',
+            borderRadius: 2,
+            '& > :not(style)': { m: 1 },
+            padding: { xs: '20px', md: '40px' },
+            position: 'relative',
+            left: { xs: '700px', md: '700px' },
+            bottom: { xs: '460px', md: '460px' },
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: { xs: '15px', md: '25px' },
+              textAlign: { xs: 'start', md: 'center' },
+              fontWeight: 'bold',
+              color: 'black',
+              // marginLeft: { xs: '6px', md: '0' },
+            }}
+          >
+            Already <br /> Using <span style={{ color: '#990000' }}>Etrip</span>zone?
+          </Typography>
+          <TextField id="email" label="Email" variant="standard" fullWidth margin="normal" />
+          <TextField id="password" label="Password" variant="standard" fullWidth margin="normal" />
+          <Button
+            sx={{
+              width: { xs: '100%' },
+              backgroundColor: "#001E17",
+              color: "#ffffff",
+              marginTop: '20px',
+            }}
+            variant="contained"
+          >
+            Login
+          </Button>
+          <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+            <Typography sx={{ color: '#6a6a6a', fontSize: '12px' }}>Don't have an account? </Typography>
+            <a href="" style={{ color: '#990000', fontSize: "12px", marginLeft: '5px' }}>Register Now</a>
+          </Box>
+        </Box>
+      </Grid>
+    </Grid>
   )
 }
+
+
 
 export default Banner

@@ -1,88 +1,31 @@
-import { Box, Container, Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
-import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import HomeIcon from "@mui/icons-material/Home";
-import InfoIcon from "@mui/icons-material/Info";
-import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
-import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
-import { BsCart2 } from 'react-icons/bs';
-import { HiArrowRightEndOnRectangle, HiOutlineBars3 } from 'react-icons/hi2';
-// import { HiOutlineBars3 } from 'react-icons/hi2';
-import Logo from '../../assets/logo1.png'
+import { Box, Grid } from '@mui/material'
+import { HiArrowRightEndOnRectangle } from 'react-icons/hi2';
+import Logo from '../../assets/logo7.png'
 
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(false);
-  const menuOptions = [
-    {
-      text: "Home",
-      icon: <HomeIcon />,
-    },
-    {
-      text: "About",
-      icon: <InfoIcon />,
-    },
-    {
-      text: "Testimonials",
-      icon: <CommentRoundedIcon />,
-    },
-    {
-      text: "Contact",
-      icon: <PhoneRoundedIcon />,
-    },
-    {
-      text: "Cart",
-      icon: <ShoppingCartRoundedIcon />,
-    },
-  ];
+
   return (
-    <nav>
-      <div
-        sx={{
-          height: '20px'
-        }}
-        className="nav-logo-container"
-      >
 
-        <img src={Logo} alt="" />
-
-      </div>
-      <div className="navbar-links-container">
-        {/* <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Testimonials</a>
-        <a href="">Contact</a>
-        <a href="">
-          <BsCart2 className="navbar-cart-icon" />
-        </a> */}
-        <button className="primary-button"
-
-        ><HiArrowRightEndOnRectangle /> Rejister</button>
-      </div>
-      <div className="navbar-menu-container">
-        <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
-      </div>
-      <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor="right">
-        <Box
-          sx={{ width: 250 }}
-          role="presentation"
-          onClick={() => setOpenMenu(false)}
-          onKeyDown={() => setOpenMenu(false)}
-        >
-          <List>
-            {menuOptions.map((item) => (
-              <ListItem key={item.text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-          <Drawer />
+    <Grid container justifyContent="center">
+      <Grid item xs={12} md={12} sx={{ px: 2 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Box sx={{ display: 'flex' }}>
+            <img src={Logo} alt="Logo"
+            // style={{ maxWidth: '100px', maxHeight: '50px' }} 
+            />
+          </Box>
+          <Box sx={{ display: 'flex', my: { xs: 2, md: 5 } }}>
+            <button
+              style={{ padding: '8px 16px', fontSize: '14px', backgroundColor: '#001E17', color: '#ffffff', border: 'none', borderRadius: '4px' }}
+            >
+              <HiArrowRightEndOnRectangle style={{ marginRight: '5px' }} /> Register
+            </button>
+          </Box>
         </Box>
-      </Drawer>
-    </nav>
+      </Grid>
+    </Grid>
+
+
   )
 }
 
